@@ -1,0 +1,39 @@
+apply plugin: 'com.android.application'
+
+android {
+
+    compileSdkVersion 27
+
+    defaultConfig {
+        applicationId "com.felhr.serialportexample"
+        minSdkVersion 19
+        targetSdkVersion 27
+        versionName project.VERSION_NAME
+        versionCode Integer.parseInt(project.VERSION_CODE)
+    }
+
+    compileOptions {
+        encoding "UTF-8"
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+    buildToolsVersion '27.0.3'
+}
+
+dependencies {
+    implementation 'com.android.support:support-v4:27.1.1'
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.github.felHR85:UsbSerial:4.5'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    implementation files('lib/lib-secommunication-1.7.0.jar')
+    implementation 'com.google.code.gson:gson:2.8.1'
+    // glide image library
+    implementation 'com.github.bumptech.glide:glide:4.3.1'
+    // Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.1.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.4.0'
+    // JSON Parsing
+    implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
+}
